@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Posts page</h2>
+    {% for post in posts %}
+        <p>
+            <a href={{ url_for('post.show', post_id=post.id) }}>{{ post.title }}</a>
+        </p>
+    {% endfor %}
+{% endblock %}
